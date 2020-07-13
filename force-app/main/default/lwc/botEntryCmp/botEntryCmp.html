@@ -1,0 +1,24 @@
+<template>
+    
+    <!-- DEFAULT CHAT TEMPLATE -->
+    <template if:true={isBaseTextVisible}>
+        <div class={messageStyle}>
+            <lightning-formatted-rich-text value={strMessage}></lightning-formatted-rich-text>
+        </div>
+    </template>
+
+    <!-- SearchRequest CHAT TEMPLATE -->
+    <template if:true={searchRequest}>
+        <div class={messageStyle}>
+            <c-search-request  onpostmessage={handlePostMessage}></c-search-request>
+        </div>
+    </template>
+
+
+    <!-- SearchResponse CHAT TEMPLATE -->
+    <template if:true={searchRequest}>
+        <div class={messageStyle}>
+            <c-search-request  onpostmessage={handlePostMessage}></c-search-request>
+        </div>
+    </template>
+</template>
